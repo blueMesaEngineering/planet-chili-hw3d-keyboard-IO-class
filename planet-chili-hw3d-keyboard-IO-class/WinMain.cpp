@@ -25,7 +25,7 @@ int CALLBACK WinMain(
 			/******************** KEYBOARD MESSAGE TEST ********************/
 			if (wnd.kbd.KeyIsPressed(VK_SPACE))
 			{
-				MessageBox(nullptr, L"Something Happen!", L"Spacebar Key Was Pressed!", MB_OK | MB_ICONEXCLAMATION);
+				MessageBoxA(nullptr, "Something Happen!", "Spacebar Key Was Pressed!", MB_OK | MB_ICONEXCLAMATION);
 			}
 			/******************** END KEYBOARD MESSAGE TEST ********************/
 		}
@@ -40,15 +40,15 @@ int CALLBACK WinMain(
 	}
 	catch (const ChiliException& e)
 	{
-		MessageBox(nullptr, (LPCWSTR)e.what(), (LPCWSTR)e.GetType(), MB_OK | MB_ICONEXCLAMATION);
+		MessageBoxA(nullptr, e.what(), e.GetType(), MB_OK | MB_ICONEXCLAMATION);
 	}
 	catch (const std::exception& e)
 	{
-		MessageBox(nullptr, (LPCWSTR)e.what(), L"Standard Exception", MB_OK | MB_ICONEXCLAMATION);
+		MessageBoxA(nullptr, e.what(), "Standard Exception", MB_OK | MB_ICONEXCLAMATION);
 	}
 	catch (...)
 	{
-		MessageBox(nullptr, L"No details available", L"Unknown Exception", MB_OK | MB_ICONEXCLAMATION);
+		MessageBoxA(nullptr, "No details available", "Unknown Exception", MB_OK | MB_ICONEXCLAMATION);
 	}
 	return -1;
 }

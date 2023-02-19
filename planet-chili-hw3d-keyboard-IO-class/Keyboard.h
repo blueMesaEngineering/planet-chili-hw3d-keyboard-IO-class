@@ -1,7 +1,6 @@
 #pragma once
 #include <queue>
 #include <bitset>
-#include <optional>
 
 class Keyboard
 {
@@ -61,7 +60,7 @@ public:
 	bool CharIsEmpty() const noexcept;
 	void FlushChar() noexcept;
 	void Flush() noexcept;
-	// autorepeat constrol
+	// autorepeat control
 	void EnableAutorepeat() noexcept;
 	void DisableAutorepeat() noexcept;
 	bool AutorepeatIsEnabled() const noexcept;
