@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 #include "ChiliWin.h"
 #include "ChiliException.h"
 #include "Keyboard.h"
@@ -19,23 +19,24 @@ public:
 		HRESULT hr;
 	};
 private:
+
 	// singleton manages registration/cleanup of window class
 	class WindowClass
 	{
 	public:
-		static const wchar_t* GetName() noexcept;
+		static const char* GetName() noexcept;
 		static HINSTANCE GetInstance() noexcept;
 	private:
 		WindowClass() noexcept;
 		~WindowClass();
 		WindowClass(const WindowClass&) = delete;
-		static constexpr const wchar_t* wndClassName = L"Chili Direct3D Engine Window";
+		static constexpr const char* wndClassName = "Chili Direct3D Engine Window";
 		static WindowClass wndClass;
 		HINSTANCE hInst;
 	};
 public:
 	Window(int width, int height);
-	Window(int width, int height, const wchar_t* name);
+	Window(int width, int height, const char* name);
 	~Window();
 	Window(const Window&) = delete;
 private:

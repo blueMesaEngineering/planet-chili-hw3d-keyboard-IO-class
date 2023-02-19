@@ -93,6 +93,7 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <FloatingPointModel>Fast</FloatingPointModel>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -111,6 +112,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FloatingPointModel>Fast</FloatingPointModel>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -150,7 +152,6 @@
   <ItemGroup>
     <ClCompile Include="ChiliExeption.cpp" />
     <ClCompile Include="Keyboard.cpp" />
-    <ClCompile Include="Source.cpp" />
     <ClCompile Include="WindowMessageMap.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
@@ -158,6 +159,7 @@
     <ClInclude Include="ChiliException.h" />
     <ClInclude Include="ChiliWin.h" />
     <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Window.cpp" />
     <ClInclude Include="WindowsMessageMap.h" />
     <ClInclude Include="Window.h" />
@@ -165,6 +167,10 @@
   <ItemGroup>
     <Image Include="..\..\..\..\..\..\Temp Backup\blueMesaStudiosIcon.ico" />
     <Image Include="..\..\..\..\..\..\Temp Backup\blueMesaStudiosIcon.png" />
+    <Image Include="E:\Temp Backup\blueMesaStudiosIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="planet-chili-hw3d-keyboard-IO-class.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
