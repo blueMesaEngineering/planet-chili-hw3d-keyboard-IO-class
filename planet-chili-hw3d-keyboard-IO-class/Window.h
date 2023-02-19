@@ -1,4 +1,4 @@
-//#pragma once
+#pragma once
 #include "ChiliWin.h"
 #include "ChiliException.h"
 #include "Keyboard.h"
